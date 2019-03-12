@@ -46,7 +46,7 @@ def Poisk(captcha):
                     text2.append(text)
                     l = l+1
     if (q == 0 and l != 0):
-        print (text2)
+        print (text2)# печатаю для интереса что вышло, для определенности можно печатать только text[0]
         plt.imshow(captcha, cmap='gray')
         plt.title('Разгаданная капча')
         plt.show()
