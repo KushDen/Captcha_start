@@ -12,13 +12,15 @@ from scipy.signal import medfilt
 from PIL import Image, ImageDraw
 from scipy.ndimage import gaussian_filter
 
-def Proverka(text2, text, l):
-    for j in range (l):
+def Proverka(text2, text, l): #эту функцию можно заменить на (if(text in text2)) это и будет проверкой в одну строчку                          
+    for j in range (l):       # а вообще, здесь лучше использовать структуру данных set, это хеш таблицы, время на поиск - O(1)
         if(text2[j] == text):
             return 1
     return 0    
+
 def End():
     print('OK')
+
 def Poisk(captcha):
     l = 0
     q = 0
